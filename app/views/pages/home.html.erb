@@ -1,2 +1,12 @@
-<h1>Welcome to SUPPLE!</h1>
-<p>Sign up <%= link_to "here", "#" %>.</p>
+<div class="jumbotron center">
+     <h1>Welcome to SUPPLE!</h1>
+     <p>Imagine you are the bachelor/ette of your own personal show. This is an interactive dating supplement that helps you make the best decisions as you look for THE ONE.</p>
+     <% if user_signed_in? %>
+      # do something
+     <% else %>
+  	<p>
+     <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+     <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  	</p>
+  <% end %>     
+</div>
